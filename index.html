@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy León - Diseñador Web Freelancer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">JL</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h4>Soy Jeremy León</h4>
+            <h1>DESARROLLADOR WEB</h1>
+            <h2>Freelancer Experto en HTML, JAVASCRIPT, CSS</h2>
+            <h5>Ayudo a marcas personales, proyectos y emprendedores a <b>crear una página web profesional y única con HTML, JAVASCRIPT, CSS</b> haciendo que tu idea se haga realidad</h5>
+            <a href="https://wa.me/0982937523?text=%F0%9F%93%9A%20Hola%20Jeremy%2C%20%C2%BFc%C3%B3mo%20est%C3%A1s%3F%20Estoy%20muy%20interesado%20en%20crear%20mi%20propia%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20servicios.%20Quiero%20algo%20moderno%2C%20atractivo%20y%20que%20realmente%20destaque%2C%20as%C3%AD%20que%20me%20encantar%C3%ADa%20saber%20c%C3%B3mo%20podr%C3%ADamos%20trabajar%20juntos%20para%20lograrlo.%20%C2%BFPodr%C3%ADas%20brindarme%20detalles%20y%20orientaci%C3%B3n%3F%20%C2%A1Gracias!" class="cta-button" target="_blank">
+                <i class="fab fa-whatsapp"></i> ¡Cotiza tu Web Ahora!
+            </a>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO CON CARRUSEL -->
+    <section class="portfolio" id="portafolio">
+        <div class="container">
+            <h2 class="section-title">Mi Portafolio</h2>
+
+            <!-- CARRUSEL: solo visible en desktop -->
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <button class="carousel-btn prev" id="prevCarousel"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="portfolio-item" data-modal="modal1">
+                            <div class="portfolio-image">
+                                <img src="img/tiendawebportada.png" alt="Tienda Online">
+                                <div class="overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <h3>Tienda Online</h3>
+                        </div>
+                        <div class="portfolio-item" data-modal="modal2">
+                            <div class="portfolio-image">
+                                <img src="img/ladingpageportada.png" alt="Landing Page">
+                                <div class="overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <h3>Landing Pro</h3>
+                        </div>
+                        <div class="portfolio-item" data-modal="modal3">
+                            <div class="portfolio-image">
+                                <img src="img/panel login.png" alt="Dashboard">
+                                <div class="overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <h3>Dashboard Admin</h3>
+                        </div>
+                        <div class="portfolio-item ver-mas-item">
+                            <div class="portfolio-image ver-mas-bg">
+                                <i class="fas fa-plus-circle"></i>
+                                <div class="overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <h3>Ver Más</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" id="nextCarousel"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+
+            <!-- GRID: solo visible en tablet y móvil -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-item" data-modal="modal1">
+                    <div class="portfolio-image">
+                        <img src="img/tiendawebportada.png" alt="Tienda Online">
+                        <div class="overlay"><i class="fas fa-eye"></i></div>
+                    </div>
+                    <h3>Tienda Online</h3>
+                </div>
+                <div class="portfolio-item" data-modal="modal2">
+                    <div class="portfolio-image">
+                        <img src="img/ladingpageportada.png">
+                        <div class="overlay"><i class="fas fa-eye"></i></div>
+                    </div>
+                    <h3>Landing Pro</h3>
+                </div>
+                <div class="portfolio-item" data-modal="modal3">
+                    <div class="portfolio-image">
+                        <img src="img/panel login.png" alt="Dashboard">
+                        <div class="overlay"><i class="fas fa-eye"></i></div>
+                    </div>
+                    <h3>Dashboard Admin</h3>
+                </div>
+                <div class="portfolio-item ver-mas-item">
+                    <div class="portfolio-image ver-mas-bg">
+                        <i class="fas fa-plus-circle"></i>
+                        <div class="overlay"><i class="fas fa-eye"></i></div>
+                    </div>
+                    <h3>Ver Más</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODAL PROYECTO -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+            <button class="close" id="closeModal"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+
+                <!-- IZQUIERDA: Carrusel mini de imágenes -->
+                <div class="modal-left">
+                    <div class="mini-carousel">
+                        <div class="mini-carousel-track" id="miniTrack">
+                            <!-- imágenes se insertan por JS -->
+                        </div>
+                        <div class="mini-nav">
+                            <button class="mini-btn" id="miniPrev"><i class="fas fa-chevron-left"></i></button>
+                            <span class="mini-counter" id="miniCounter">1 / 1</span>
+                            <button class="mini-btn" id="miniNext"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Video debajo del carrusel mini -->
+                    <div class="modal-video-box" id="modalVideoBox"></div>
+                </div>
+
+                <!-- DERECHA: Info del proyecto -->
+                <div class="modal-right">
+                    <h2 id="modalTitle">Proyecto</h2>
+                    <p id="modalDescription">Descripción del proyecto...</p>
+                    <a id="projectLink" class="project-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i> Descargar Proyecto
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL VER MÁS -->
+    <div id="verMasModal" class="modal-simple">
+        <div class="modal-simple-content">
+            <button class="close-simple" id="closeVerMas"><i class="fas fa-times"></i></button>
+            <div class="modal-simple-body">
+                <i class="fas fa-folder-open"></i>
+                <h3>No hay más proyectos disponibles</h3>
+                <p>Por el momento</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Mis Servicios</h2>
+            <p class="section-subtitle">Todo lo que necesitas para tener presencia profesional en internet</p>
+
+            <!-- BLOQUE 1: DESARROLLO WEB -->
+            <div class="srv-block">
+                <div class="srv-block-header">
+                    <div class="srv-icon"><i class="fas fa-code"></i></div>
+                    <div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Sitios y aplicaciones web a medida, rápidos, modernos y completamente responsivos.</p>
+                    </div>
+                </div>
+                <div class="srv-tags-grid">
+                    <div class="srv-tag"><i class="fas fa-store"></i> E-Commerce / Tienda Online</div>
+                    <div class="srv-tag"><i class="fas fa-rocket"></i> Landing Page</div>
+                    <div class="srv-tag"><i class="fas fa-user-tie"></i> Página Corporativa</div>
+                    <div class="srv-tag"><i class="fas fa-briefcase"></i> Portfolio Personal</div>
+                    <div class="srv-tag"><i class="fas fa-newspaper"></i> Blog / Revista Digital</div>
+                    <div class="srv-tag"><i class="fas fa-chart-line"></i> Dashboard / Panel Admin</div>
+                    <div class="srv-tag"><i class="fas fa-calendar-alt"></i> Sistema de Reservas</div>
+                    <div class="srv-tag"><i class="fas fa-graduation-cap"></i> Plataforma Educativa</div>
+                    <div class="srv-tag"><i class="fas fa-utensils"></i> Menú Digital / Restaurante</div>
+                    <div class="srv-tag"><i class="fas fa-building"></i> Sitio Inmobiliario</div>
+                    <div class="srv-tag"><i class="fas fa-mobile-alt"></i> Web App Progresiva (PWA)</div>
+                    <div class="srv-tag"><i class="fas fa-link"></i> One Page / Sitio Minimalista</div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: LENGUAJES Y TECNOLOGÍAS -->
+            <div class="srv-block">
+                <div class="srv-block-header">
+                    <div class="srv-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div>
+                        <h3>Lenguajes & Tecnologías</h3>
+                        <p>Dominio de las herramientas más utilizadas en el desarrollo web moderno.</p>
+                    </div>
+                </div>
+                <div class="srv-tech-grid">
+                    <div class="tech-card">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-leaf"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-sass"></i>
+                        <span>SASS</span>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-bootstrap"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
